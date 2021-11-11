@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="tip/images/favicon-32x32.png">
+
+    <script type="text/javascript" src="myScript.js"></script>
+</head>
+<body>
+    <header>
+        <h1>SPLI</h1><h1>TTER</h1>
+    </header>
+    <div id="container">
+        <div id="inputCon">
+            <div>
+                <p>Bill</p>
+                <input type="number" id="bill" placeholder="0">
+            </div>
+            <div>
+                <p>Select Tip %</p>
+                <div id="select">
+                    <button onclick='tipClick("tip1")' id="tip1">5%</button>
+                    <button onclick='tipClick("tip2")' id="tip2">10%</button>
+                    <button onclick='tipClick("tip3")' id="tip3">15%</button>
+                    <button onclick='tipClick("tip4")' id="tip4">25%</button>
+                    <button onclick='tipClick("tip5")' id="tip5">50%</button>
+                    <input type="number" id="tip" placeholder="Custom">
+                </div>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between;">
+                    <p>Number of People</p><p id="zeroWar" style="color: #ac7262;">Can't be zero</p>
+                </div>
+                <input type="number" id="people" placeholder="0">
+            </div>
+        </div>
+        <div id="scoreCon">
+            <div>
+                <div class="scoreScr">
+                    <div>
+                        <p>Tip Amount</p>
+                        <p class="thin">/ person</p>
+                    </div>
+                    <h2 id="scr1">$0.00</h2>
+                </div>
+                <div class="scoreScr">
+                    <div>
+                        <p>Total</p>
+                        <p class="thin">/ person</p>
+                    </div>
+                    <h2 id="scr2">$0.00</h2>
+                </div>
+            </div>
+            <button onclick="reset()" id="reset">RESET</button>
+            <script type="text/javascript">
+                inputCheck();
+            </script>
+        </div>
+    </div>
+</body>
+</html>
